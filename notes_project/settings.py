@@ -57,13 +57,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'notes_project.wsgi.application'
 
-# Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.mibufucrtdyujaqrvoit',
+        'PASSWORD': 'pythondevrahul',
+        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
+        'PORT': '5432',
     }
 }
+
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -90,6 +95,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'https://notes-app-frontend-lovat.vercel.app',
+    'https://todo-rahul.vercel.app/',
 ]
 CORS_ALLOW_CREDENTIALS = True
